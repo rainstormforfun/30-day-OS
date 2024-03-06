@@ -1,0 +1,1317 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/%E7%AC%AC2%E5%A4%A9/">
+      
+      
+        <link rel="prev" href="../%E7%AC%AC1%E5%A4%A9/">
+      
+      
+        <link rel="next" href="../%E7%AC%AC3%E5%A4%A9/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>第2天 - 《30天自制操作系统》学习总结</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-makefile" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="《30天自制操作系统》学习总结" class="md-header__button md-logo" aria-label="《30天自制操作系统》学习总结" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《30天自制操作系统》学习总结
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第2天
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rainstormforfun/30-day-OS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    30 day OS
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="《30天自制操作系统》学习总结" class="md-nav__button md-logo" aria-label="《30天自制操作系统》学习总结" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    《30天自制操作系统》学习总结
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rainstormforfun/30-day-OS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    30 day OS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    封面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC1%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第1天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第2天
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    第2天
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      继续开发
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="继续开发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helloosnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      将helloos.nas改成更简单易懂的形式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BIOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      显示一个字符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7c00" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x7c00
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      先制作启动区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="先制作启动区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iplnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ipl.nas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipllst" class="md-nav__link">
+    <span class="md-ellipsis">
+      ipl.lst
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile入门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Makefile入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      更省事的窍门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      更更省事的窍门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC3%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第3天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC4%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第4天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC5%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第5天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC6%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第6天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC7%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第7天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC8%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第8天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC9%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第9天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC10%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第10天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC11%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第11天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      继续开发
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="继续开发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helloosnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      将helloos.nas改成更简单易懂的形式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BIOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      显示一个字符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0x7c00" class="md-nav__link">
+    <span class="md-ellipsis">
+      0x7c00
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      先制作启动区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="先制作启动区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iplnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ipl.nas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipllst" class="md-nav__link">
+    <span class="md-ellipsis">
+      ipl.lst
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile入门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Makefile入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      更省事的窍门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      更更省事的窍门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="2-makefile">第2天 汇编语言学习与Makefile入门</h1>
+<h2 id="_1">继续开发</h2>
+<p>我们还不知道<a href="https://rainstormforfun.github.io/30-day-OS_learning/%E7%AC%AC1%E5%A4%A9/">第1天</a><code>helloos.nas</code>中程序主体的意思。</p>
+<h3 id="helloosnas">将<code>helloos.nas</code>改成更简单易懂的形式</h3>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">; hello-os</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">; TAB=4</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0x7c00</span><span class="w">        </span><span class="c1">; 指明程序的装载地址</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">; 以下的记述用于标准FAT12格式的软盘</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">entry</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x90</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">; 中略</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">; 程序核心</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nl">entry:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span><span class="w">          </span><span class="c1">; 初始化寄存器 </span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="nv">msg</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nl">putloop:</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span><span class="w">          </span><span class="c1">; 给SI加1</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nf">JE</span><span class="w">     </span><span class="nv">fin</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x0e</span><span class="w">       </span><span class="c1">; 显示一个文字</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">15</span><span class="w">         </span><span class="c1">; 指定字符颜色</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span><span class="w">          </span><span class="c1">; 调用显卡BIOS</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">putloop</span><span class="w">       </span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="nl">fin:</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nf">HLT</span><span class="w">                  </span><span class="c1">; 让CPU停止，等待指令</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span><span class="w">           </span><span class="c1">; 无限循环</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nl">msg:</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0x0a</span><span class="w">     </span><span class="c1">; 换行2次</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;hello, world&quot;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="w">          </span><span class="c1">; 换行</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span>
+</span></code></pre></div>
+<p><img alt="1355738917.png" src="https://vs-picbed-1320307070.cos.ap-nanjing.myqcloud.com/img/1355738917.png" /></p>
+<ul>
+<li><code>ORG</code>：告诉<code>nask</code>，在开始执行的时候，把这些<strong>机器语言指令</strong>装载到内存中的哪个地址，如果没有它，有几个指令就不能被正确地翻译和执行。<code>$</code>代表将要读入的内存地址。</li>
+<li>标签：<code>entry</code>......</li>
+<li><code>MOV AX,0</code>:  <code>AX = 0</code></li>
+<li><code>JMP entry</code>: <code>JMP 0x7c50</code></li>
+<li><code>ADD SI,1</code>: <code>SI = SI + 1</code></li>
+<li><code>CMP</code>: <code>if(a = 3){处理;}</code></li>
+<li><code>JE</code>: 如果比较结果相等，就跳转 <code>if(AL == 0){ goto fin;}</code>。jump if equal</li>
+<li><code>INT</code>: interrupt</li>
+<li><code>HLT</code>: 让CPU进入待机状态</li>
+</ul>
+<h3 id="_2">寄存器</h3>
+<p>CPU里有一种名为<strong>寄存器</strong>的<strong>存储电路</strong>，在机器语言中就相当于<strong>变量</strong>的功能。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>8个16位寄存器，按机器语言中寄存器的编号顺序排列
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>AX - accumulator        累加寄存器
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>CX - counter            计数寄存器
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>DX - data               数据寄存器
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>BX - base               基址寄存器
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>SP - stack pointer      栈指针寄存器
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>BP - base pointer       基址指针寄存器
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>SI - source index       源变址寄存器
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>DI - destination index  目的变址寄存器
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>8个8位寄存器
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>AL - 累加寄存器低位
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>CL - 计数寄存器低位
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>DL - 数据寄存器低位
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>BL - 基址寄存器低位
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>AH - 累加寄存器高位
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>CH - 计数寄存器高位
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>DH - 数据寄存器高位
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>BH - 基址寄存器高位
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>32位寄存器
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI 
+</span></code></pre></div>
+<p>EAX的32位中低16位就是AX，高16位没有编号，必须使用移位命令移到低位。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>6个16位段寄存器
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ES - extra segment       附加段寄存器
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>CS - code segment        代码段寄存器
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>SS - stack segment       栈段寄存器
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>DS - data segment        数据段寄存器
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>FS - segment part
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>GS - segment part
+</span></code></pre></div>
+<h3 id="_3">内存</h3>
+<p>对于CPU来说，内存实际上是外部存储器。严格说来，CPU和内存之间还有称为芯片的控制单元，进行信息交换。</p>
+<p>CPU访问内存的速度比访问寄存器慢很多倍。</p>
+<p><code>MOV</code>指令的数据传送源和传送目的地不仅可以是寄存器或常数，<mark>也可以是内存地址</mark>。我们就使用方括号表示内存地址。</p>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span><span class="w">    </span><span class="c1">; 指定地址为SI的内存</span>
+</span></code></pre></div>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="kt">BYTE</span><span class="w"> </span><span class="p">[</span><span class="mi">678</span><span class="p">],</span><span class="mi">123</span><span class="w">     </span><span class="c1">; 8位</span>
+</span></code></pre></div>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="kt">WORD</span><span class="w"> </span><span class="p">[</span><span class="mi">678</span><span class="p">],</span><span class="mi">123</span><span class="w">     </span><span class="c1">; 16位 低位678，高位679</span>
+</span></code></pre></div>
+<p>虽然我们可以用寄存器来指定内存地址，但是可作此用途的只有<code>BX BP SI DI</code>。</p>
+<p>把<code>DX</code>内存里的内容赋值给<code>AL</code>的时候</p>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="nb">BX</span><span class="p">,</span><span class="w"> </span><span class="nb">DX</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nf">MOV</span><span class="w"> </span><span class="nb">AL</span><span class="p">,</span><span class="w"> </span><span class="kt">BYTE</span><span class="w"> </span><span class="p">[</span><span class="nb">BX</span><span class="p">]</span><span class="w">  </span>
+</span></code></pre></div>
+<p><code>MOV</code>指令有一个规则，源数据和目的数据必须位数相同。</p>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="nb">AL</span><span class="p">,</span><span class="w"> </span><span class="nb">BX</span>
+</span></code></pre></div>
+<p>但是不可以写成</p>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="nb">AX</span><span class="p">,</span><span class="w"> </span><span class="nb">CL</span>
+</span></code></pre></div>
+<h3 id="rom">ROM</h3>
+<p>read only memory。只读存储器，不能写入，切断电源以后内容不会消失。</p>
+<h3 id="bios">BIOS</h3>
+<ul>
+<li>basic input output system 基本输入输出系统</li>
+<li>出厂时就组装在电脑主板上的ROM单元里。</li>
+<li>电脑厂家在BIOS中预先写入了操作系统开发人员经常会用到的一些<strong>程序</strong>，非常方便。</li>
+<li><code>INT</code>后面是个数字，可以使用不同的数字调用BIOS中不同的函数。</li>
+<li><a href="https://www.cnblogs.com/church/p/4186350.html">BIOS中断汇编函数</a></li>
+</ul>
+<h4 id="_4">显示一个字符</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>AH = 0x0e;
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>AL = character code;
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>BH = 0;
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>BL = color code;
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>返回值：无
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>注：beep、退格、CR\LF都会被当作控制字符处理
+</span></code></pre></div>
+<p>作者也尚不清楚为什么只能显示白色。只能推测现在这个画面模式下，不能简单地指定字符颜色。</p>
+<h4 id="0x7c00"><code>0x7c00</code></h4>
+<ul>
+<li>内存的0号地址，是BIOS用来实现各种不同功能的地方</li>
+<li><code>0xf0000</code>地址附近，还存放着BIOS程序本身 </li>
+<li><a href="https://wiki.osdev.org/Memory_Map_(x86)">内存分布图</a></li>
+</ul>
+<h2 id="_5">先制作启动区</h2>
+<p>考虑到以后的开发，我们不要一下子就用<code>nask</code>来做整个磁盘映像，而是先只用它来制作512字节的启动区，剩下的部分我们用<strong>磁盘映像管理工具</strong>来做。</p>
+<h3 id="iplnas"><code>ipl.nas</code></h3>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">; hello-os</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1">; TAB=4</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1">; 以下这段是标准FAT12格式软盘专用的代码</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mh">0xeb</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4e</span><span class="p">,</span><span class="w"> </span><span class="mh">0x90</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="s">&quot;HELLOIPL&quot;</span><span class="w">    </span><span class="c1">; 启动区的名称可以是任意的字符串(8字节)</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">512</span><span class="w">           </span><span class="c1">; 每个扇区(sector)的大小(必须为512字节) </span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mi">1</span><span class="w">             </span><span class="c1">; 簇(cluster)的大小(必须为1个扇区)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">1</span><span class="w">             </span><span class="c1">; FAT的起始位置(一般从第一个扇区开始)</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mi">2</span><span class="w">             </span><span class="c1">; FAT的个数(必须为2)</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">224</span><span class="w">           </span><span class="c1">; 根目录的大小(一般设成224项)</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">2880</span><span class="w">          </span><span class="c1">; 该磁盘的大小(必须是2880扇区)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mh">0xf0</span><span class="w">          </span><span class="c1">; 磁盘的种类(必须是0xf0)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">9</span><span class="w">             </span><span class="c1">; FAT的长度(必须是9扇区)</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">18</span><span class="w">            </span><span class="c1">; 1个磁道(track)有几个扇区(必须是18)</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="kd">DW</span><span class="w">    </span><span class="mi">2</span><span class="w">             </span><span class="c1">; 磁头数(必须是2) </span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">    </span><span class="kd">DD</span><span class="w">    </span><span class="mi">0</span><span class="w">             </span><span class="c1">; 不使用分区，必须是0</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="kd">DD</span><span class="w">    </span><span class="mi">2880</span><span class="w">          </span><span class="c1">; 重写一次磁盘大小</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x29</span><span class="w">      </span><span class="c1">; 意义不明，固定</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="kd">DD</span><span class="w">    </span><span class="mh">0xffffffff</span><span class="w">    </span><span class="c1">; (可能是)卷标号码</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="s">&quot;HELLO-OS&quot;</span><span class="w">    </span><span class="c1">; 磁盘的名称(11字节) </span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="s">&quot;FAT12   &quot;</span><span class="w">    </span><span class="c1">; 磁盘格式名称(8字节)</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">  </span><span class="mi">18</span><span class="w">            </span><span class="c1">; 先空出18字节    </span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="c1">; 程序主体</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="nl">entry:</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span><span class="w">          </span><span class="c1">; 初始化寄存器 </span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="nv">msg</span>
+</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="nl">putloop:</span>
+</span><span id="__span-12-33"><a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span>
+</span><span id="__span-12-34"><a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span><span class="w">          </span><span class="c1">; 给SI加1</span>
+</span><span id="__span-12-35"><a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-12-36"><a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">    </span><span class="nf">JE</span><span class="w">     </span><span class="nv">fin</span>
+</span><span id="__span-12-37"><a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x0e</span><span class="w">       </span><span class="c1">; 显示一个文字</span>
+</span><span id="__span-12-38"><a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">15</span><span class="w">         </span><span class="c1">; 指定字符颜色</span>
+</span><span id="__span-12-39"><a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span><span class="w">          </span><span class="c1">; 调用显卡BIOS</span>
+</span><span id="__span-12-40"><a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">putloop</span><span class="w">       </span>
+</span><span id="__span-12-41"><a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="nl">fin:</span>
+</span><span id="__span-12-42"><a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="w">    </span><span class="nf">HLT</span><span class="w">                  </span><span class="c1">; 让CPU停止，等待指令</span>
+</span><span id="__span-12-43"><a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span><span class="w">           </span><span class="c1">; 无限循环</span>
+</span><span id="__span-12-44"><a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a><span class="nl">msg:</span>
+</span><span id="__span-12-45"><a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0x0a</span><span class="w">     </span><span class="c1">; 换行2次</span>
+</span><span id="__span-12-46"><a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;hello, world&quot;</span>
+</span><span id="__span-12-47"><a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="w">          </span><span class="c1">; 换行</span>
+</span><span id="__span-12-48"><a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-12-49"><a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a>
+</span><span id="__span-12-50"><a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a><span class="c1">; 信息显示部分</span>
+</span><span id="__span-12-51"><a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mh">0x0a</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0a</span><span class="w">    </span><span class="c1">; 2个换行</span>
+</span><span id="__span-12-52"><a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="s">&quot;hello, world&quot;</span>
+</span><span id="__span-12-53"><a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mh">0x0a</span><span class="w">          </span><span class="c1">; 换行</span>
+</span><span id="__span-12-54"><a id="__codelineno-12-54" name="__codelineno-12-54" href="#__codelineno-12-54"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mi">0</span>
+</span><span id="__span-12-55"><a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">  </span><span class="mh">0x1fe</span><span class="o">-</span><span class="kc">$</span><span class="w">       </span><span class="c1">; 填写0x00，直到0x001fe</span>
+</span><span id="__span-12-56"><a id="__codelineno-12-56" name="__codelineno-12-56" href="#__codelineno-12-56"></a><span class="w">    </span><span class="kd">DB</span><span class="w">    </span><span class="mh">0x55</span><span class="p">,</span><span class="w"> </span><span class="mh">0xaa</span>
+</span></code></pre></div>
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">REM asm.bat</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>..\z_tools\nask.exe ipl.nas ipl.bin ipl.lst
+</span></code></pre></div>
+<p><code>ipl.lst</code>是列表文件，可以用来简单确认每个指令是怎样翻译成机器语言的。</p>
+<p>利用作者自己开发的<strong>磁盘映像管理工具</strong><code>edimg.exe</code>，先读入一个空白的磁盘映像文件，然后再开头写入<code>ipl.bin</code>的内容，最后将结果输出为<code>helloos.img</code>的磁盘映像文件。</p>
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">REM makeimg.bat</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>..\z_tools\edimg.exe imgin:../z_tools/fdimg0at.tek wbinmig src:ipl.bin len:512 from:0 to:0 imgout:helloos.img
+</span></code></pre></div>
+<p><code>asm - makeimg - run</code></p>
+<h3 id="ipllst"><code>ipl.lst</code></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>     1 00000000                                 ; hello-os
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>     2 00000000                                 ; TAB=4
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>     3 00000000                                 
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>     4                                                  ORG     0x7c00          ; このプログラムがどこに読み込まれるのか
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>     5 00007C00                                 
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>     6 00007C00                                 ; 以下は標準的なFAT12フォーマットフロッピーディスクのための記述
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>     7 00007C00                                 
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>     8 00007C00 EB 4E                                   JMP     entry
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>     9 00007C02 90                                      DB      0x90
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    10 00007C03 48 45 4C 4C 4F 49 50 4C                 DB      &quot;HELLOIPL&quot;      ; ブートセクタの名前を自由に書いてよい（8バイト）
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>    11 00007C0B 0200                                    DW      512             ; 1セクタの大きさ（512にしなければいけない）
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    12 00007C0D 01                                      DB      1               ; クラスタの大きさ（1セクタにしなければいけない）
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    13 00007C0E 0001                                    DW      1               ; FATがどこから始まるか（普通は1セクタ目からにする）
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    14 00007C10 02                                      DB      2               ; FATの個数（2にしなければいけない）
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    15 00007C11 00E0                                    DW      224             ; ルートディレクトリ領域の大きさ（普通は224エントリにする）
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    16 00007C13 0B40                                    DW      2880            ; このドライブの大きさ（2880セクタにしなければいけない）
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>    17 00007C15 F0                                      DB      0xf0            ; メディアのタイプ（0xf0にしなければいけない）
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    18 00007C16 0009                                    DW      9               ; FAT領域の長さ（9セクタにしなければいけない）
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>    19 00007C18 0012                                    DW      18              ; 1トラックにいくつのセクタがあるか（18にしなければいけない）
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>    20 00007C1A 0002                                    DW      2               ; ヘッドの数（2にしなければいけない）
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>    21 00007C1C 00000000                                DD      0               ; パーティションを使ってないのでここは必ず0
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>    22 00007C20 00000B40                                DD      2880            ; このドライブ大きさをもう一度書く
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>    23 00007C24 00 00 29                                DB      0,0,0x29        ; よくわからないけどこの値にしておくといいらしい
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>    24 00007C27 FFFFFFFF                                DD      0xffffffff      ; たぶんボリュームシリアル番号
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>    25 00007C2B 48 45 4C 4C 4F 2D 4F 53 20 20           DB      &quot;HELLO-OS   &quot;   ; ディスクの名前（11バイト）
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>       00007C35 20 
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>    26 00007C36 46 41 54 31 32 20 20 20                 DB      &quot;FAT12   &quot;      ; フォーマットの名前（8バイト）
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>    27 00007C3E 00 00 00 00 00 00 00 00 00 00           RESB    18              ; とりあえず18バイトあけておく
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>       00007C48 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>    28 00007C50                                 
+</span><span id="__span-15-31"><a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>    29 00007C50                                 ; プログラム本体
+</span><span id="__span-15-32"><a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>    30 00007C50                                 
+</span><span id="__span-15-33"><a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>    31 00007C50                                 entry:
+</span><span id="__span-15-34"><a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>    32 00007C50 B8 0000                                 MOV     AX,0            ; レジスタ初期化
+</span><span id="__span-15-35"><a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>    33 00007C53 8E D0                                   MOV     SS,AX
+</span><span id="__span-15-36"><a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>    34 00007C55 BC 7C00                                 MOV     SP,0x7c00
+</span><span id="__span-15-37"><a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>    35 00007C58 8E D8                                   MOV     DS,AX
+</span><span id="__span-15-38"><a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>    36 00007C5A 8E C0                                   MOV     ES,AX
+</span><span id="__span-15-39"><a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>    37 00007C5C                                 
+</span><span id="__span-15-40"><a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>    38 00007C5C BE 7C74                                 MOV     SI,msg
+</span><span id="__span-15-41"><a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>    39 00007C5F                                 putloop:
+</span><span id="__span-15-42"><a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>    40 00007C5F 8A 04                                   MOV     AL,[SI]
+</span><span id="__span-15-43"><a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>    41 00007C61 83 C6 01                                ADD     SI,1            ; SIに1を足す
+</span><span id="__span-15-44"><a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>    42 00007C64 3C 00                                   CMP     AL,0
+</span><span id="__span-15-45"><a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>    43 00007C66 74 09                                   JE      fin
+</span><span id="__span-15-46"><a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>    44 00007C68 B4 0E                                   MOV     AH,0x0e         ; 一文字表示ファンクション
+</span><span id="__span-15-47"><a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a>    45 00007C6A BB 000F                                 MOV     BX,15           ; カラーコード
+</span><span id="__span-15-48"><a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>    46 00007C6D CD 10                                   INT     0x10            ; ビデオBIOS呼び出し
+</span><span id="__span-15-49"><a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>    47 00007C6F EB EE                                   JMP     putloop
+</span><span id="__span-15-50"><a id="__codelineno-15-50" name="__codelineno-15-50" href="#__codelineno-15-50"></a>    48 00007C71                                 fin:
+</span><span id="__span-15-51"><a id="__codelineno-15-51" name="__codelineno-15-51" href="#__codelineno-15-51"></a>    49 00007C71 F4                                      HLT                     ; 何かあるまでCPUを停止させる
+</span><span id="__span-15-52"><a id="__codelineno-15-52" name="__codelineno-15-52" href="#__codelineno-15-52"></a>    50 00007C72 EB FD                                   JMP     fin             ; 無限ループ
+</span><span id="__span-15-53"><a id="__codelineno-15-53" name="__codelineno-15-53" href="#__codelineno-15-53"></a>    51 00007C74                                 
+</span><span id="__span-15-54"><a id="__codelineno-15-54" name="__codelineno-15-54" href="#__codelineno-15-54"></a>    52 00007C74                                 msg:
+</span><span id="__span-15-55"><a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a>    53 00007C74 0A 0A                                   DB      0x0a, 0x0a      ; 改行を2つ
+</span><span id="__span-15-56"><a id="__codelineno-15-56" name="__codelineno-15-56" href="#__codelineno-15-56"></a>    54 00007C76 68 65 6C 6C 6F 2C 20 77 6F 72           DB      &quot;hello, world&quot;
+</span><span id="__span-15-57"><a id="__codelineno-15-57" name="__codelineno-15-57" href="#__codelineno-15-57"></a>       00007C80 6C 64 
+</span><span id="__span-15-58"><a id="__codelineno-15-58" name="__codelineno-15-58" href="#__codelineno-15-58"></a>    55 00007C82 0A                                      DB      0x0a            ; 改行
+</span><span id="__span-15-59"><a id="__codelineno-15-59" name="__codelineno-15-59" href="#__codelineno-15-59"></a>    56 00007C83 00                                      DB      0
+</span><span id="__span-15-60"><a id="__codelineno-15-60" name="__codelineno-15-60" href="#__codelineno-15-60"></a>    57 00007C84                                 
+</span><span id="__span-15-61"><a id="__codelineno-15-61" name="__codelineno-15-61" href="#__codelineno-15-61"></a>    58 00007C84 00 00 00 00 00 00 00 00 00 00           RESB    0x7dfe-$        ; 0x7dfeまでを0x00で埋める命令
+</span><span id="__span-15-62"><a id="__codelineno-15-62" name="__codelineno-15-62" href="#__codelineno-15-62"></a>       00007C8E 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-63"><a id="__codelineno-15-63" name="__codelineno-15-63" href="#__codelineno-15-63"></a>       00007C98 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-64"><a id="__codelineno-15-64" name="__codelineno-15-64" href="#__codelineno-15-64"></a>       00007CA2 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-65"><a id="__codelineno-15-65" name="__codelineno-15-65" href="#__codelineno-15-65"></a>       00007CAC 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-66"><a id="__codelineno-15-66" name="__codelineno-15-66" href="#__codelineno-15-66"></a>       00007CB6 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-67"><a id="__codelineno-15-67" name="__codelineno-15-67" href="#__codelineno-15-67"></a>       00007CC0 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-68"><a id="__codelineno-15-68" name="__codelineno-15-68" href="#__codelineno-15-68"></a>       00007CCA 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-69"><a id="__codelineno-15-69" name="__codelineno-15-69" href="#__codelineno-15-69"></a>       00007CD4 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-70"><a id="__codelineno-15-70" name="__codelineno-15-70" href="#__codelineno-15-70"></a>       00007CDE 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-71"><a id="__codelineno-15-71" name="__codelineno-15-71" href="#__codelineno-15-71"></a>       00007CE8 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-72"><a id="__codelineno-15-72" name="__codelineno-15-72" href="#__codelineno-15-72"></a>       00007CF2 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-73"><a id="__codelineno-15-73" name="__codelineno-15-73" href="#__codelineno-15-73"></a>       00007CFC 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-74"><a id="__codelineno-15-74" name="__codelineno-15-74" href="#__codelineno-15-74"></a>       00007D06 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-75"><a id="__codelineno-15-75" name="__codelineno-15-75" href="#__codelineno-15-75"></a>       00007D10 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-76"><a id="__codelineno-15-76" name="__codelineno-15-76" href="#__codelineno-15-76"></a>       00007D1A 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-77"><a id="__codelineno-15-77" name="__codelineno-15-77" href="#__codelineno-15-77"></a>       00007D24 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-78"><a id="__codelineno-15-78" name="__codelineno-15-78" href="#__codelineno-15-78"></a>       00007D2E 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-79"><a id="__codelineno-15-79" name="__codelineno-15-79" href="#__codelineno-15-79"></a>       00007D38 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-80"><a id="__codelineno-15-80" name="__codelineno-15-80" href="#__codelineno-15-80"></a>       00007D42 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-81"><a id="__codelineno-15-81" name="__codelineno-15-81" href="#__codelineno-15-81"></a>       00007D4C 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-82"><a id="__codelineno-15-82" name="__codelineno-15-82" href="#__codelineno-15-82"></a>       00007D56 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-83"><a id="__codelineno-15-83" name="__codelineno-15-83" href="#__codelineno-15-83"></a>       00007D60 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-84"><a id="__codelineno-15-84" name="__codelineno-15-84" href="#__codelineno-15-84"></a>       00007D6A 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-85"><a id="__codelineno-15-85" name="__codelineno-15-85" href="#__codelineno-15-85"></a>       00007D74 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-86"><a id="__codelineno-15-86" name="__codelineno-15-86" href="#__codelineno-15-86"></a>       00007D7E 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-87"><a id="__codelineno-15-87" name="__codelineno-15-87" href="#__codelineno-15-87"></a>       00007D88 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-88"><a id="__codelineno-15-88" name="__codelineno-15-88" href="#__codelineno-15-88"></a>       00007D92 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-89"><a id="__codelineno-15-89" name="__codelineno-15-89" href="#__codelineno-15-89"></a>       00007D9C 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-90"><a id="__codelineno-15-90" name="__codelineno-15-90" href="#__codelineno-15-90"></a>       00007DA6 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-91"><a id="__codelineno-15-91" name="__codelineno-15-91" href="#__codelineno-15-91"></a>       00007DB0 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-92"><a id="__codelineno-15-92" name="__codelineno-15-92" href="#__codelineno-15-92"></a>       00007DBA 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-93"><a id="__codelineno-15-93" name="__codelineno-15-93" href="#__codelineno-15-93"></a>       00007DC4 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-94"><a id="__codelineno-15-94" name="__codelineno-15-94" href="#__codelineno-15-94"></a>       00007DCE 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-95"><a id="__codelineno-15-95" name="__codelineno-15-95" href="#__codelineno-15-95"></a>       00007DD8 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-96"><a id="__codelineno-15-96" name="__codelineno-15-96" href="#__codelineno-15-96"></a>       00007DE2 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-97"><a id="__codelineno-15-97" name="__codelineno-15-97" href="#__codelineno-15-97"></a>       00007DEC 00 00 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-98"><a id="__codelineno-15-98" name="__codelineno-15-98" href="#__codelineno-15-98"></a>       00007DF6 00 00 00 00 00 00 00 00 
+</span><span id="__span-15-99"><a id="__codelineno-15-99" name="__codelineno-15-99" href="#__codelineno-15-99"></a>    59 00007DFE                                 
+</span><span id="__span-15-100"><a id="__codelineno-15-100" name="__codelineno-15-100" href="#__codelineno-15-100"></a>    60 00007DFE 55 AA                                   DB      0x55, 0xaa
+</span></code></pre></div>
+<h2 id="makefile">Makefile入门</h2>
+<p>Makefile就像是一个非常聪明的<strong>批处理文件</strong>。</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># 文件生成规则</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nf">ipl.bin </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span>../z_tools/nask.exe/<span class="w"> </span>ipl.nas<span class="w"> </span>ipl.bin<span class="w"> </span>ipl.lst
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nf">helloos.img </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">bin</span> <span class="n">Makefile</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span>../z_tools/edimg.exe<span class="w"> </span>imgin:/z_tools/fdimg0at.tek<span class="w"> </span>wbinimg<span class="w"> </span>scr:ipl.bin<span class="w"> </span>len:512<span class="w"> </span>from:0<span class="w"> </span>to:0<span class="w"> </span>imgout:helloos.img
+</span></code></pre></div>
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">REM make.bat</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>..\z_tools\make.exe <span class="nv">%1</span> <span class="nv">%2</span> <span class="nv">%3</span> <span class="nv">%4</span> <span class="nv">%5</span> <span class="nv">%6</span> <span class="nv">%7</span> <span class="nv">%8</span> <span class="nv">%9</span>
+</span></code></pre></div>
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">REM 寻找制作ipl.bin的方法</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>make -r ipl.bin
+</span></code></pre></div>
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">REM 寻找制作helloos.img的方法 </span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>make -r helloos.img
+</span></code></pre></div>
+<h3 id="_6">更省事的窍门</h3>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c"># 命令</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c"># make img</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="c"># make -r helloos.img</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="nf">img </span><span class="o">:</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>-r<span class="w"> </span>helloos.img
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nf">asm </span><span class="o">:</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>-r<span class="w"> </span>ipl.bin
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="nf">run </span><span class="o">:</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>img
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span>copy<span class="w"> </span>helloos.img<span class="w"> </span>..<span class="se">\z</span>_tools<span class="se">\q</span>emu<span class="se">\f</span>dimage0.bin
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>-C<span class="w"> </span>../z_tools/qemu
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="nf">install </span><span class="o">:</span>
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>img
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="w">    </span>../z_tools/imgtol.com<span class="w"> </span>w<span class="w"> </span>a:helloos.img
+</span></code></pre></div>
+<p>只需要输入</p>
+<div class="language-batch highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>make run
+</span></code></pre></div>
+<h3 id="_7">更更省事的窍门</h3>
+<p>当执行不带参数的<code>make</code>时，就相当于执行<code>make img</code></p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">default </span><span class="o">:</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>img
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nf">ipl.bin </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">    </span>../z_tools/nask.exe<span class="w"> </span>ipl.nas<span class="w"> </span>ipl.bin<span class="w"> </span>ipl.lst
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nf">helloos.img </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">bin</span> <span class="n">Makefile</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span>../z_tools/eding.exe<span class="w"> </span>imgin:../z_tools/fdimg0at.tek<span class="w"> </span>wbinimg<span class="w"> </span>src:ipl.bin<span class="w"> </span>len:512<span class="w"> </span>from:0<span class="w"> </span>to:0<span class="w">   </span>imgout:helloos.img
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="nf">asm </span><span class="o">:</span><span class="w"> </span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>-r<span class="w"> </span>ipl.bin
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="nf">img </span><span class="o">:</span>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>-r<span class="w"> </span>helloos.img
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="nf">run </span><span class="o">:</span>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w"> </span>../z_tools/make.exe<span class="w"> </span>img
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="w"> </span>copy<span class="w"> </span>helloos.img<span class="w"> </span>..<span class="se">\z</span>_tools<span class="se">\q</span>emu<span class="se">\f</span>dimage0.bin
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="w"> </span>../z_tools/make.exe<span class="w"> </span>-C<span class="w"> </span>../z_tools/qemu
+</span><span id="__span-22-20"><a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>
+</span><span id="__span-22-21"><a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="nf">install </span><span class="o">:</span>
+</span><span id="__span-22-22"><a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>img
+</span><span id="__span-22-23"><a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a><span class="w">    </span>..z_tools/imgtol.com<span class="w"> </span>w<span class="w"> </span>a:<span class="w"> </span>helloos.img
+</span><span id="__span-22-24"><a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a>
+</span><span id="__span-22-25"><a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a><span class="nf">clean </span><span class="o">:</span><span class="w"> </span>
+</span><span id="__span-22-26"><a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a><span class="w">    </span>-del<span class="w"> </span>ipl.bin
+</span><span id="__span-22-27"><a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a><span class="w">    </span>-del<span class="w"> </span>ipl.lst
+</span><span id="__span-22-28"><a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a>
+</span><span id="__span-22-29"><a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a><span class="nf">src_only </span><span class="o">:</span>
+</span><span id="__span-22-30"><a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a><span class="w">    </span>../z_tools/make.exe<span class="w"> </span>clean
+</span><span id="__span-22-31"><a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a><span class="w">    </span>-del<span class="w"> </span>helloos.img
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - present Rainstorm
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

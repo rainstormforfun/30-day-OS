@@ -1,0 +1,1886 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/%E7%AC%AC3%E5%A4%A9/">
+      
+      
+        <link rel="prev" href="../%E7%AC%AC2%E5%A4%A9/">
+      
+      
+        <link rel="next" href="../%E7%AC%AC4%E5%A4%A9/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>第3天 - 《30天自制操作系统》学习总结</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-32c" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="《30天自制操作系统》学习总结" class="md-header__button md-logo" aria-label="《30天自制操作系统》学习总结" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《30天自制操作系统》学习总结
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第3天
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rainstormforfun/30-day-OS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    30 day OS
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="《30天自制操作系统》学习总结" class="md-nav__button md-logo" aria-label="《30天自制操作系统》学习总结" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    《30天自制操作系统》学习总结
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rainstormforfun/30-day-OS" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    30 day OS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    封面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC1%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第1天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC2%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第2天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第3天
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    第3天
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ipl" class="md-nav__link">
+    <span class="md-ellipsis">
+      制作真正的IPL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="制作真正的IPL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-0x13" class="md-nav__link">
+    <span class="md-ellipsis">
+      INT 0x13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      缓冲地址
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="缓冲地址">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      段寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ds" class="md-nav__link">
+    <span class="md-ellipsis">
+      默认的段寄存器 DS:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用变量的Makefile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      试错
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="试错">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      读到18扇区
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      读入10个柱面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      着手开发操作系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="着手开发操作系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      最简单的操作系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haribotesys" class="md-nav__link">
+    <span class="md-ellipsis">
+      haribote.sys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hariboteimg" class="md-nav__link">
+    <span class="md-ellipsis">
+      haribote.img
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      从启动区执行操作系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      确认操作系统的执行情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32位模式前期准备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="32位模式前期准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vram" class="md-nav__link">
+    <span class="md-ellipsis">
+      VRAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      开始导入C语言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开始导入C语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      C语言怎样变成机器语言
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      目标文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目标文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      映像文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现HLT
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC4%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第4天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC5%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第5天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC6%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第6天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC7%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第7天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC8%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第8天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC9%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第9天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC10%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第10天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC11%E5%A4%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第11天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ipl" class="md-nav__link">
+    <span class="md-ellipsis">
+      制作真正的IPL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="制作真正的IPL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-0x13" class="md-nav__link">
+    <span class="md-ellipsis">
+      INT 0x13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      缓冲地址
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="缓冲地址">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      段寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ds" class="md-nav__link">
+    <span class="md-ellipsis">
+      默认的段寄存器 DS:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用变量的Makefile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      试错
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="试错">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      读到18扇区
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      读入10个柱面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      着手开发操作系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="着手开发操作系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      最简单的操作系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haribotesys" class="md-nav__link">
+    <span class="md-ellipsis">
+      haribote.sys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hariboteimg" class="md-nav__link">
+    <span class="md-ellipsis">
+      haribote.img
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      从启动区执行操作系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      确认操作系统的执行情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32位模式前期准备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="32位模式前期准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vram" class="md-nav__link">
+    <span class="md-ellipsis">
+      VRAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      开始导入C语言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开始导入C语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      C语言怎样变成机器语言
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      目标文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目标文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      映像文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现HLT
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="3-32c">第3天 进入32位模式并导入C语言</h1>
+<h2 id="ipl">制作真正的IPL</h2>
+<p>这次我们将使用<strong>启动区</strong>装载程序。</p>
+<div class="language-nasm highlight"><span class="filename">ipl.nas</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">; haribote-ipl</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">; TAB=4</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0x7c00</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">entry</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x90</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTE&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">512</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">224</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0xf0</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">9</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">18</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x29</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mh">0xffffffff</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTEOS &quot;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;FAT12   &quot;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">   </span><span class="mi">18</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nl">entry:</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0820</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">0</span><span class="w">         </span><span class="c1">; 柱面0</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span><span class="w">         </span><span class="c1">; 磁头0</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">2</span><span class="w">         </span><span class="c1">; 扇区2</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x02</span><span class="w">      </span><span class="c1">; 读盘</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">1</span><span class="w">         </span><span class="c1">; 1个扇区</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span><span class="w">      </span><span class="c1">; A驱动器</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span><span class="w">         </span><span class="c1">; 调用磁盘BIOS</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="nf">JC</span><span class="w">     </span><span class="nv">error</span>
+</span></code></pre></div>
+<ul>
+<li><code>JC</code>: jump if carry。如果进位标志(carry flag)是1，就跳转。</li>
+<li><strong>标志</strong>：1位寄存器</li>
+</ul>
+<h3 id="int-0x13"><code>INT 0x13</code></h3>
+<ul>
+<li>磁盘读、写，扇区校验，以及寻道<ul>
+<li><code>AH=0x02</code> 读盘</li>
+<li><code>AH=0x03</code> 写盘</li>
+<li><code>AH=0x04</code> 校验</li>
+<li><code>AH=0x0c</code> 寻道</li>
+<li><code>AL=处理对象的扇区数(只能同时处理连续的扇区)</code></li>
+<li><code>CH=柱面号 &amp;0xff</code></li>
+<li><code>CL=扇区号(0-5位) | (柱面号&amp;0x300)**2</code></li>
+<li><code>DH=磁头号</code></li>
+<li><code>DL=驱动器号</code></li>
+<li><code>ES:BX=缓冲地址(校验及寻道时不使用)</code></li>
+<li>返回值：</li>
+<li><code>FLAGS.CF==0</code> 没有错误，<code>AH==0</code></li>
+<li><code>FLAGS.CF==1</code> 有错误，错误号码存入<code>AH</code>内(与重置功能一样)</li>
+</ul>
+</li>
+</ul>
+<p>1张软盘有80个柱面，2个磁头，18个扇区，一个扇区有512字节。</p>
+<p>含有IPL的启动区，位于<code>C0-H0-S1</code>(柱面0，磁头0，扇区1)</p>
+<p>下一个扇区是<code>C0-H0-S2</code></p>
+<h3 id="_1">缓冲地址</h3>
+<p>这是个内存地址，<mark>表明我们要把从软盘上读出的数据装载到内存中的哪个位置。</mark></p>
+<p>如果能用一个寄存器来表示内存地址的话，很方便，但是一个<code>BX</code>只能表示<code>0~0xffff</code>(16位)，也就是只有<code>0~65535</code>。</p>
+<div class="arithmatex">\[65535 \div 2^{10} = 63.999\]</div>
+<p>最大才64K。但是电脑最起码也都有64M内存。</p>
+<h4 id="_2">段寄存器</h4>
+<p>我们在使用段寄存器时，以<code>ES:BX</code>这种方式来表示地址，写成
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">ES</span><span class="p">:</span><span class="nb">BX</span><span class="p">]</span>
+</span></code></pre></div>
+它代表<code>ES*16+BX</code>的内存地址。我们可以理解成，<mark>先用<code>ES</code>寄存器指定一个大致的地址，然后再用<code>BX</code>来指定其中一个具体地址</mark>。这样就是<span class="arithmatex">\(65535\times 17 =1114095字节=1087.983KB\)</span>，这就可以指定1M以内的内存了。</p>
+<p>这次<code>ES=0x0820, BX=0</code>，所以软盘的数据将被装载到内存中<code>0x8200</code>到<code>0x83ff</code>。<code>0x8000~0x81ff</code>，要把启动区的内容读到那里。<code>0x7c00~0x7dff</code>用于启动区，<code>0x7e00~0x9fbff</code>没有特别的用途，操作系统可以随意使用。</p>
+<h4 id="ds">默认的段寄存器 <code>DS:</code></h4>
+<div class="language-nasm highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">MOV</span><span class="w">  </span><span class="nb">CX</span><span class="p">,[</span><span class="mi">1234</span><span class="p">]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">; 其实是</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nf">MOV</span><span class="w">  </span><span class="nb">CX</span><span class="p">,[</span><span class="nb">DS</span><span class="p">:</span><span class="mi">1234</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>因为有这样的规则，所以<code>DS</code>必须预先设置为0</strong></p>
+<h3 id="makefile">使用变量的Makefile</h3>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">TOOLPATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>../z_tools/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">MAKE</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>make.exe<span class="w"> </span>-r
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nv">NASK</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>nask.exe
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nv">EDIMG</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>edimg.exe
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nv">IMGTOL</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>imgtol.com
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nv">COPY</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>copy
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nv">DEL</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>del
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nf">default </span><span class="o">:</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nf">ipl.bin </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="k">$(</span>NASK<span class="k">)</span><span class="w"> </span>ipl.nas<span class="w"> </span>ipl.bin<span class="w"> </span>ipl.lst
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="nf">haribote.img </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">bin</span> <span class="n">Makefile</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="k">$(</span>EDIMG<span class="k">)</span><span class="w"> </span>imgin:../z_tools/fdimg0at.tek<span class="w"> </span>wbinimg<span class="w"> </span>src:ipl.bin<span class="w"> </span>len:512<span class="w"> </span>from:0<span class="w"> </span>to:0<span class="w"> </span>imgout:haribote.img
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="nf">asm </span><span class="o">:</span><span class="w"> </span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>ipl.bin
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nf">img </span><span class="o">:</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>haribote.img
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="nf">run </span><span class="o">:</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="k">$(</span>COPY<span class="k">)</span><span class="w"> </span>haribote.img<span class="w"> </span>..<span class="se">\z</span>_tools<span class="se">\q</span>emu<span class="se">\f</span>dimage0.bin
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>-C<span class="w"> </span>../z_tools/qemu
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="nf">install </span><span class="o">:</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">    </span><span class="k">$(</span>IMGTOL<span class="k">)</span><span class="w"> </span>w<span class="w"> </span>a:haribote.img
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="nf">clean </span><span class="o">:</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>ipl.bin
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>ipl.lst
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="nf">src_only </span><span class="o">:</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>clean
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>haribote.img
+</span></code></pre></div>
+<h2 id="_3">试错</h2>
+<p>如果软盘不能读数据，我们决定重试5次。</p>
+<div class="language-nasm highlight"><span class="filename">ipl.nas</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">; haribote-ipl</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">; TAB=4</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0x7c00</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">entry</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x90</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTE&quot;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">512</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">224</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0xf0</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">9</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">18</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x29</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mh">0xffffffff</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTEOS &quot;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;FAT12   &quot;</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">   </span><span class="mi">18</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="nl">entry:</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0820</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">0</span><span class="w">        </span><span class="c1">; 柱面0</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span><span class="w">        </span><span class="c1">; 磁头0</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">2</span><span class="w">        </span><span class="c1">; 扇区2</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">0</span><span class="w">        </span><span class="c1">; 记录失败次数的寄存器</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="nl">retry:</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x02</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span><span class="w">     </span><span class="c1">; A驱动器</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span><span class="w">        </span><span class="c1">; 调用磁盘BIOS</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">    </span><span class="nf">JNC</span><span class="w">    </span><span class="nv">fin</span><span class="w">         </span><span class="c1">; 没出错的话跳转到fin </span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">5</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">    </span><span class="nf">JAE</span><span class="w">    </span><span class="nv">error</span><span class="w">       </span><span class="c1">; SI&gt;=5时，跳转到error</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span><span class="w">     </span><span class="c1">; A驱动器</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span><span class="w">        </span><span class="c1">; 重置驱动器</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">retry</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="nl">fin:</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="w">    </span><span class="nf">HLT</span>
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="nl">error:</span>
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="nv">msg</span>
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="nl">putloop:</span>
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span>
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="w">    </span><span class="nf">JE</span><span class="w">     </span><span class="nv">fin</span>
+</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x0e</span>
+</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">15</span>
+</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span>
+</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">putloop</span>
+</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>
+</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a><span class="nl">msg:</span>
+</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0x0a</span>
+</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;load error&quot;</span>
+</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span>
+</span><span id="__span-4-73"><a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-4-74"><a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">   </span><span class="mh">0x7dfe</span><span class="o">-</span><span class="kc">$</span>
+</span><span id="__span-4-75"><a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x55</span><span class="p">,</span><span class="mh">0xaa</span>
+</span></code></pre></div>
+<ul>
+<li><code>JNC</code>: jump if not carry。进位标志是0的话就跳转。</li>
+<li><code>JAE</code>: jump if above or equal。大于或等于时跳转。</li>
+<li><code>AH=0x00, DL=0x00, INT 0x13</code>这是系统复位。</li>
+</ul>
+<h3 id="18">读到18扇区</h3>
+<div class="language-nasm highlight"><span class="filename">ipl.nas</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0x7c00</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">entry</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x90</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTE&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">512</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">224</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0xf0</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">9</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">28</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x29</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="kd">DD</span><span class="w">     </span><span class="mh">0xffffffff</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTEOS&quot;</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;FAT12   &quot;</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">   </span><span class="mi">18</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0820</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">0</span><span class="w">         </span><span class="c1">; 柱面0</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span><span class="w">         </span><span class="c1">; 磁头0</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">2</span><span class="w">         </span><span class="c1">; 扇区2</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="nl">readloop:</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">0</span><span class="w">         </span><span class="c1">; 记录失败次数的寄存器</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="nl">retry:</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x02</span><span class="w">      </span><span class="c1">; 读入磁盘</span>
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">1</span><span class="w">         </span><span class="c1">; 1个扇区</span>
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">0</span><span class="w">         </span>
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span><span class="w">      </span><span class="c1">; A驱动器</span>
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span>
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="w">    </span><span class="nf">JNC</span><span class="w">    </span><span class="nv">next</span><span class="w">         </span><span class="c1">; 没出错时跳转到next</span>
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">5</span>
+</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="w">    </span><span class="nf">JAE</span><span class="w">    </span><span class="nv">error</span><span class="w">        </span><span class="c1">; SI &gt;= 5时,跳转到error</span>
+</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span><span class="w">      </span><span class="c1">; A驱动器</span>
+</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span><span class="w">         </span><span class="c1">; 重置驱动器</span>
+</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">retry</span>
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="nl">next:</span>
+</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="nb">ES</span><span class="w">        </span><span class="c1">; 把内存地址后移0x200</span>
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0020</span>
+</span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span><span class="w">        </span><span class="c1">; 因为没有ADD ES,0x0020的指令</span>
+</span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">18</span>
+</span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a><span class="w">    </span><span class="nf">JBE</span><span class="w">    </span><span class="nv">readloop</span><span class="w">     </span><span class="c1">; 如果CL &lt;= 18跳转至readloop</span>
+</span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a>
+</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a><span class="nl">fin:</span>
+</span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a><span class="w">    </span><span class="nf">HLT</span>
+</span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span><span id="__span-5-63"><a id="__codelineno-5-63" name="__codelineno-5-63" href="#__codelineno-5-63"></a>
+</span><span id="__span-5-64"><a id="__codelineno-5-64" name="__codelineno-5-64" href="#__codelineno-5-64"></a><span class="nl">error:</span>
+</span><span id="__span-5-65"><a id="__codelineno-5-65" name="__codelineno-5-65" href="#__codelineno-5-65"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="nv">msg</span>
+</span><span id="__span-5-66"><a id="__codelineno-5-66" name="__codelineno-5-66" href="#__codelineno-5-66"></a>
+</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a><span class="nl">putloop:</span>
+</span><span id="__span-5-68"><a id="__codelineno-5-68" name="__codelineno-5-68" href="#__codelineno-5-68"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span>
+</span><span id="__span-5-69"><a id="__codelineno-5-69" name="__codelineno-5-69" href="#__codelineno-5-69"></a><span class="w">    </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-5-70"><a id="__codelineno-5-70" name="__codelineno-5-70" href="#__codelineno-5-70"></a><span class="w">    </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-5-71"><a id="__codelineno-5-71" name="__codelineno-5-71" href="#__codelineno-5-71"></a><span class="w">    </span><span class="nf">JE</span><span class="w">     </span><span class="nv">fin</span>
+</span><span id="__span-5-72"><a id="__codelineno-5-72" name="__codelineno-5-72" href="#__codelineno-5-72"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x0e</span>
+</span><span id="__span-5-73"><a id="__codelineno-5-73" name="__codelineno-5-73" href="#__codelineno-5-73"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">15</span>
+</span><span id="__span-5-74"><a id="__codelineno-5-74" name="__codelineno-5-74" href="#__codelineno-5-74"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span>
+</span><span id="__span-5-75"><a id="__codelineno-5-75" name="__codelineno-5-75" href="#__codelineno-5-75"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">putloop</span>
+</span><span id="__span-5-76"><a id="__codelineno-5-76" name="__codelineno-5-76" href="#__codelineno-5-76"></a>
+</span><span id="__span-5-77"><a id="__codelineno-5-77" name="__codelineno-5-77" href="#__codelineno-5-77"></a><span class="nl">msg:</span>
+</span><span id="__span-5-78"><a id="__codelineno-5-78" name="__codelineno-5-78" href="#__codelineno-5-78"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0x0a</span>
+</span><span id="__span-5-79"><a id="__codelineno-5-79" name="__codelineno-5-79" href="#__codelineno-5-79"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;load error&quot;</span>
+</span><span id="__span-5-80"><a id="__codelineno-5-80" name="__codelineno-5-80" href="#__codelineno-5-80"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span>
+</span><span id="__span-5-81"><a id="__codelineno-5-81" name="__codelineno-5-81" href="#__codelineno-5-81"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-5-82"><a id="__codelineno-5-82" name="__codelineno-5-82" href="#__codelineno-5-82"></a>
+</span><span id="__span-5-83"><a id="__codelineno-5-83" name="__codelineno-5-83" href="#__codelineno-5-83"></a><span class="w">    </span><span class="kd">RESB</span><span class="w">   </span><span class="mh">0x7dfe</span><span class="o">-</span><span class="kc">$</span>
+</span><span id="__span-5-84"><a id="__codelineno-5-84" name="__codelineno-5-84" href="#__codelineno-5-84"></a>
+</span><span id="__span-5-85"><a id="__codelineno-5-85" name="__codelineno-5-85" href="#__codelineno-5-85"></a><span class="w">    </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x55</span><span class="p">,</span><span class="mh">0xaa</span>
+</span></code></pre></div>
+<ul>
+<li><code>JBE</code>：jump if below or equal</li>
+</ul>
+<p>程序要做的事很简单，要读下一个扇区，只需要给<code>CL</code>加1，给<code>ES</code>加上<code>0x20</code>就行了。<code>CL</code>是扇区号，<code>ES</code>指定读入地址。<code>0x20</code>是十六进制下512除以16的结果。</p>
+<p>向<code>BX</code>里加上512确实更简单，但这次我们想练习往<code>ES</code>里面做加法的方法</p>
+<h2 id="10">读入10个柱面</h2>
+<p><code>C0-H0-S18</code>的下一扇区，是<strong>磁盘反面</strong>的<code>C0-H1-S1</code>，这次也从<code>0xa400</code>读入，按顺序读到<code>C0-H1-S18</code>后，接着读下一个柱面<code>C1-H0-S1</code>，保持这个势头，一直读到<code>C9-H1-S18</code>就好了。</p>
+<div class="language-nasm highlight"><span class="filename">ipl.nas</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="no">CYLS</span><span class="w">    </span><span class="kd">EQU</span><span class="w">    </span><span class="mi">10</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">        </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0x7c00</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">entry</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x90</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTE&quot;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">512</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">224</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0xf0</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">9</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">18</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="kd">DD</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="kd">DD</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x29</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="kd">DD</span><span class="w">     </span><span class="mh">0xffffffff</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTEOS &quot;</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;FAT12   &quot;</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="kd">RESB</span><span class="w">   </span><span class="s">&quot;18&quot;</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="nl">entry:</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0820</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">2</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="nl">readloop:</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="nl">retry:</span>
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x02</span>
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-43"><a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-6-44"><a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span>
+</span><span id="__span-6-45"><a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="w">        </span><span class="nf">JNC</span><span class="w">    </span><span class="nv">next</span>
+</span><span id="__span-6-46"><a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-47"><a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">5</span>
+</span><span id="__span-6-48"><a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">        </span><span class="nf">JAE</span><span class="w">    </span><span class="nv">error</span>
+</span><span id="__span-6-49"><a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-6-50"><a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-6-51"><a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span>
+</span><span id="__span-6-52"><a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">retry</span>
+</span><span id="__span-6-53"><a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a>
+</span><span id="__span-6-54"><a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a><span class="nl">next:</span>
+</span><span id="__span-6-55"><a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="nb">ES</span>
+</span><span id="__span-6-56"><a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0020</span>
+</span><span id="__span-6-57"><a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-6-58"><a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-59"><a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">18</span>
+</span><span id="__span-6-60"><a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a><span class="w">        </span><span class="nf">JBE</span><span class="w">    </span><span class="nv">readloop</span>
+</span><span id="__span-6-61"><a id="__codelineno-6-61" name="__codelineno-6-61" href="#__codelineno-6-61"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-62"><a id="__codelineno-6-62" name="__codelineno-6-62" href="#__codelineno-6-62"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-63"><a id="__codelineno-6-63" name="__codelineno-6-63" href="#__codelineno-6-63"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">2</span>
+</span><span id="__span-6-64"><a id="__codelineno-6-64" name="__codelineno-6-64" href="#__codelineno-6-64"></a><span class="w">        </span><span class="nf">JB</span><span class="w">     </span><span class="nv">readloop</span>
+</span><span id="__span-6-65"><a id="__codelineno-6-65" name="__codelineno-6-65" href="#__codelineno-6-65"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-66"><a id="__codelineno-6-66" name="__codelineno-6-66" href="#__codelineno-6-66"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-67"><a id="__codelineno-6-67" name="__codelineno-6-67" href="#__codelineno-6-67"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="nv">CYLS</span>
+</span><span id="__span-6-68"><a id="__codelineno-6-68" name="__codelineno-6-68" href="#__codelineno-6-68"></a><span class="w">        </span><span class="nf">JB</span><span class="w">     </span><span class="nv">readloop</span>
+</span><span id="__span-6-69"><a id="__codelineno-6-69" name="__codelineno-6-69" href="#__codelineno-6-69"></a>
+</span><span id="__span-6-70"><a id="__codelineno-6-70" name="__codelineno-6-70" href="#__codelineno-6-70"></a><span class="nl">fin:</span>
+</span><span id="__span-6-71"><a id="__codelineno-6-71" name="__codelineno-6-71" href="#__codelineno-6-71"></a><span class="w">        </span><span class="nf">HLT</span>
+</span><span id="__span-6-72"><a id="__codelineno-6-72" name="__codelineno-6-72" href="#__codelineno-6-72"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span><span id="__span-6-73"><a id="__codelineno-6-73" name="__codelineno-6-73" href="#__codelineno-6-73"></a>
+</span><span id="__span-6-74"><a id="__codelineno-6-74" name="__codelineno-6-74" href="#__codelineno-6-74"></a><span class="nl">error:</span>
+</span><span id="__span-6-75"><a id="__codelineno-6-75" name="__codelineno-6-75" href="#__codelineno-6-75"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="nv">msg</span>
+</span><span id="__span-6-76"><a id="__codelineno-6-76" name="__codelineno-6-76" href="#__codelineno-6-76"></a>
+</span><span id="__span-6-77"><a id="__codelineno-6-77" name="__codelineno-6-77" href="#__codelineno-6-77"></a><span class="nl">putloop:</span>
+</span><span id="__span-6-78"><a id="__codelineno-6-78" name="__codelineno-6-78" href="#__codelineno-6-78"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span>
+</span><span id="__span-6-79"><a id="__codelineno-6-79" name="__codelineno-6-79" href="#__codelineno-6-79"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-6-80"><a id="__codelineno-6-80" name="__codelineno-6-80" href="#__codelineno-6-80"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-6-81"><a id="__codelineno-6-81" name="__codelineno-6-81" href="#__codelineno-6-81"></a><span class="w">        </span><span class="nf">JE</span><span class="w">     </span><span class="nv">fin</span>
+</span><span id="__span-6-82"><a id="__codelineno-6-82" name="__codelineno-6-82" href="#__codelineno-6-82"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x0e</span>
+</span><span id="__span-6-83"><a id="__codelineno-6-83" name="__codelineno-6-83" href="#__codelineno-6-83"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">15</span>
+</span><span id="__span-6-84"><a id="__codelineno-6-84" name="__codelineno-6-84" href="#__codelineno-6-84"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span>
+</span><span id="__span-6-85"><a id="__codelineno-6-85" name="__codelineno-6-85" href="#__codelineno-6-85"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">putloop</span>
+</span><span id="__span-6-86"><a id="__codelineno-6-86" name="__codelineno-6-86" href="#__codelineno-6-86"></a>
+</span><span id="__span-6-87"><a id="__codelineno-6-87" name="__codelineno-6-87" href="#__codelineno-6-87"></a><span class="nl">msg:</span>
+</span><span id="__span-6-88"><a id="__codelineno-6-88" name="__codelineno-6-88" href="#__codelineno-6-88"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0x0a</span>
+</span><span id="__span-6-89"><a id="__codelineno-6-89" name="__codelineno-6-89" href="#__codelineno-6-89"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;load error&quot;</span>
+</span><span id="__span-6-90"><a id="__codelineno-6-90" name="__codelineno-6-90" href="#__codelineno-6-90"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span>
+</span><span id="__span-6-91"><a id="__codelineno-6-91" name="__codelineno-6-91" href="#__codelineno-6-91"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-6-92"><a id="__codelineno-6-92" name="__codelineno-6-92" href="#__codelineno-6-92"></a><span class="w">        </span><span class="kd">RESB</span><span class="w">   </span><span class="mh">0x7dfe</span><span class="o">-</span><span class="kc">$</span>
+</span><span id="__span-6-93"><a id="__codelineno-6-93" name="__codelineno-6-93" href="#__codelineno-6-93"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x55</span><span class="p">,</span><span class="mh">0xaa</span>
+</span></code></pre></div>
+<ul>
+<li><code>EQU</code>：相当于C语言中的define。<code>EQU</code>的意思是equal</li>
+</ul>
+<h2 id="_4">着手开发操作系统</h2>
+<p>我们先来编写一个非常短小的程序，就只让它<code>HLT</code>。</p>
+<h3 id="_5">最简单的操作系统</h3>
+<div class="language-nasm highlight"><span class="filename">haribote.nas</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nl">fin:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nf">HLT</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span></code></pre></div>
+<p>用nask编译输出为<code>haribote.sys</code>。接下来，将这个文件保存到<strong>磁盘映像</strong><code>haribote.img</code>里。</p>
+<p>操作：</p>
+<ul>
+<li>使用<code>make install</code>命令，将磁盘映像文件写入磁盘</li>
+<li>在Windows里打开那个磁盘，把<code>haribote.sys</code>保存到磁盘上</li>
+<li>使用工具将磁盘备份为磁盘映像</li>
+</ul>
+<p>我们再来想想一下，如果不用借助磁盘和Windows就可以得到磁盘映像和文件，那多方便啊😍。</p>
+<p>能够做到这个的工具有很多，<code>edimg.exe</code>就是其中一个。</p>
+<h3 id="haribotesys"><code>haribote.sys</code></h3>
+<div class="language-makefile highlight"><span class="filename">makefile</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">TOOLPATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>../z_tools/
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">MAKE</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>make.exe<span class="w"> </span>-r
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nv">NASK</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>nask.exe
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nv">EDIMG</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>edimg.exe
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nv">IMGTOL</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>imgtol.com
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nv">COPY</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>copy
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nv">DEL</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>del
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="nf">default </span><span class="o">:</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="nf">ipl.bin </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="k">$(</span>NASK<span class="k">)</span><span class="w"> </span>ipl.nas<span class="w"> </span>ipl.bin<span class="w"> </span>ipl.lst
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="nf">haribote.sys </span><span class="o">:</span><span class="w"> </span><span class="n">haribote</span>.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="k">$(</span>NASK<span class="k">)</span><span class="w"> </span>haribote.nas<span class="w"> </span>haribote.sys<span class="w"> </span>haribote.lst
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="nf">haribote.img </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>.<span class="n">bin</span> <span class="n">harbote</span>.<span class="n">sys</span> <span class="n">Makefile</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="k">$(</span>EDIMG<span class="k">)</span><span class="w"> </span>imgin:../z_tools/fdimg0at.tek<span class="w"> </span>wbinimg<span class="w"> </span>src:ipl.bin<span class="w"> </span>len:512<span class="w"> </span>from:0<span class="w"> </span>to:0<span class="w"> </span>copy<span class="w"> </span>from:haribote.sys<span class="w"> </span>to:@:<span class="w"> </span>imgout:haribote.img
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="nf">img </span><span class="o">:</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>haribote.img
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="nf">run </span><span class="o">:</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="k">$(</span>COPY<span class="k">)</span><span class="w"> </span>haribote.img<span class="w"> </span>..<span class="se">\z</span>_tools<span class="se">\q</span>emu<span class="se">\f</span>dimage0.bin
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>-C<span class="w"> </span>../z_tools/qemu
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="nf">install </span><span class="o">:</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">    </span><span class="k">$(</span>IMGTOL<span class="k">)</span><span class="w"> </span>w<span class="w"> </span>a:<span class="w"> </span>haribote.img
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="nf">clean </span><span class="o">:</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>ipl.bin
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>ipl.lst
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>haribote.sys
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>haribote.lst
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="nf">src_only </span><span class="o">:</span>
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>clean
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>haribote.img
+</span></code></pre></div>
+<h3 id="hariboteimg"><code>haribote.img</code></h3>
+<p>用二进制编译器打开刚做成的映像文件<code>haribote.img</code>，<strong>看一看<code>haribote.sys</code>文件在磁盘中是什么样的。</strong></p>
+<p>最先注意到的地方是<code>0x002600</code>附近，磁盘的这个位置好像保存着文件名。</p>
+<p><img alt="image.png" src="https://vs-picbed-1320307070.cos.ap-nanjing.myqcloud.com/img/20240221195538.png" /></p>
+<p>再往下看，<code>0x004200</code>附近，可以看到<code>F4 EB FD</code>。</p>
+<p><img alt="image.png" src="https://vs-picbed-1320307070.cos.ap-nanjing.myqcloud.com/img/20240221195744.png" /></p>
+<p>这就是<code>haribote.sys</code>的内容。</p>
+<p><img alt="image.png" src="https://vs-picbed-1320307070.cos.ap-nanjing.myqcloud.com/img/20240221195837.png" /></p>
+<p><strong>总结</strong>：</p>
+<ol>
+<li>文件名会写在<code>0x002600</code>以后的地方</li>
+<li>文件的内容会写在<code>0x004200</code>以后的地方</li>
+</ol>
+<h2 id="_6">从启动区执行操作系统</h2>
+<p>要怎样才能执行磁盘映像上位于<code>0x4200</code>的程序🤔？</p>
+<p>现在的程序是从启动区开始，把磁盘上的内容装载到内存<code>0x8000</code>号地址，所以磁盘<code>0x4200</code>处的内容就应该位于<code>0x8000 + 0x4200 = 0xc200</code>号地址。</p>
+<p>这样的话，我们就往<code>haribote.nas</code>里加上<code>ORG 0xc200</code>，然后在<code>ipl.nas</code>处理的最后加上<code>JMP 0xc200</code>。</p>
+<div class="language-nasm highlight"><span class="filename">ipl.nas</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="no">CYLS</span><span class="w">    </span><span class="kd">EQU</span><span class="w">    </span><span class="mi">10</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">        </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0x7c00</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">entry</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x90</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTE&quot;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">512</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">1</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">224</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0xf0</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">9</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">18</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">        </span><span class="kd">DW</span><span class="w">     </span><span class="mi">2</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">        </span><span class="kd">DD</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">        </span><span class="kd">DD</span><span class="w">     </span><span class="mi">2880</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x29</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">        </span><span class="kd">DD</span><span class="w">     </span><span class="mh">0xffffffff</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;HARIBOTEOS &quot;</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;FAT12   &quot;</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">        </span><span class="kd">RESB</span><span class="w">   </span><span class="s">&quot;18&quot;</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="nl">entry:</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SP</span><span class="p">,</span><span class="mh">0x7c00</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DS</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0820</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">2</span>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="nl">readloop:</span>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="nl">retry:</span>
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x02</span>
+</span><span id="__span-9-41"><a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-42"><a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-43"><a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-9-44"><a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span>
+</span><span id="__span-9-45"><a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a><span class="w">        </span><span class="nf">JNC</span><span class="w">    </span><span class="nv">next</span>
+</span><span id="__span-9-46"><a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-47"><a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">5</span>
+</span><span id="__span-9-48"><a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a><span class="w">        </span><span class="nf">JAE</span><span class="w">    </span><span class="nv">error</span>
+</span><span id="__span-9-49"><a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-9-50"><a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DL</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-9-51"><a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x13</span>
+</span><span id="__span-9-52"><a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">retry</span>
+</span><span id="__span-9-53"><a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a>
+</span><span id="__span-9-54"><a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a><span class="nl">next:</span>
+</span><span id="__span-9-55"><a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="nb">ES</span>
+</span><span id="__span-9-56"><a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">AX</span><span class="p">,</span><span class="mh">0x0020</span>
+</span><span id="__span-9-57"><a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">ES</span><span class="p">,</span><span class="nb">AX</span>
+</span><span id="__span-9-58"><a id="__codelineno-9-58" name="__codelineno-9-58" href="#__codelineno-9-58"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-59"><a id="__codelineno-9-59" name="__codelineno-9-59" href="#__codelineno-9-59"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">18</span>
+</span><span id="__span-9-60"><a id="__codelineno-9-60" name="__codelineno-9-60" href="#__codelineno-9-60"></a><span class="w">        </span><span class="nf">JBE</span><span class="w">    </span><span class="nv">readloop</span>
+</span><span id="__span-9-61"><a id="__codelineno-9-61" name="__codelineno-9-61" href="#__codelineno-9-61"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">CL</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-62"><a id="__codelineno-9-62" name="__codelineno-9-62" href="#__codelineno-9-62"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-63"><a id="__codelineno-9-63" name="__codelineno-9-63" href="#__codelineno-9-63"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">2</span>
+</span><span id="__span-9-64"><a id="__codelineno-9-64" name="__codelineno-9-64" href="#__codelineno-9-64"></a><span class="w">        </span><span class="nf">JB</span><span class="w">     </span><span class="nv">readloop</span>
+</span><span id="__span-9-65"><a id="__codelineno-9-65" name="__codelineno-9-65" href="#__codelineno-9-65"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">DH</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-66"><a id="__codelineno-9-66" name="__codelineno-9-66" href="#__codelineno-9-66"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-67"><a id="__codelineno-9-67" name="__codelineno-9-67" href="#__codelineno-9-67"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">CH</span><span class="p">,</span><span class="nv">CYLS</span>
+</span><span id="__span-9-68"><a id="__codelineno-9-68" name="__codelineno-9-68" href="#__codelineno-9-68"></a><span class="w">        </span><span class="nf">JB</span><span class="w">     </span><span class="nv">readloop</span>
+</span><span id="__span-9-69"><a id="__codelineno-9-69" name="__codelineno-9-69" href="#__codelineno-9-69"></a>
+</span><span id="__span-9-70"><a id="__codelineno-9-70" name="__codelineno-9-70" href="#__codelineno-9-70"></a><span class="hll"><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="mh">0xc200</span>
+</span></span><span id="__span-9-71"><a id="__codelineno-9-71" name="__codelineno-9-71" href="#__codelineno-9-71"></a>
+</span><span id="__span-9-72"><a id="__codelineno-9-72" name="__codelineno-9-72" href="#__codelineno-9-72"></a><span class="nl">error:</span>
+</span><span id="__span-9-73"><a id="__codelineno-9-73" name="__codelineno-9-73" href="#__codelineno-9-73"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="nv">msg</span>
+</span><span id="__span-9-74"><a id="__codelineno-9-74" name="__codelineno-9-74" href="#__codelineno-9-74"></a>
+</span><span id="__span-9-75"><a id="__codelineno-9-75" name="__codelineno-9-75" href="#__codelineno-9-75"></a><span class="nl">putloop:</span>
+</span><span id="__span-9-76"><a id="__codelineno-9-76" name="__codelineno-9-76" href="#__codelineno-9-76"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,[</span><span class="nb">SI</span><span class="p">]</span>
+</span><span id="__span-9-77"><a id="__codelineno-9-77" name="__codelineno-9-77" href="#__codelineno-9-77"></a><span class="w">        </span><span class="nf">ADD</span><span class="w">    </span><span class="nb">SI</span><span class="p">,</span><span class="mi">1</span>
+</span><span id="__span-9-78"><a id="__codelineno-9-78" name="__codelineno-9-78" href="#__codelineno-9-78"></a><span class="w">        </span><span class="nf">CMP</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mi">0</span>
+</span><span id="__span-9-79"><a id="__codelineno-9-79" name="__codelineno-9-79" href="#__codelineno-9-79"></a><span class="w">        </span><span class="nf">JE</span><span class="w">     </span><span class="nv">fin</span>
+</span><span id="__span-9-80"><a id="__codelineno-9-80" name="__codelineno-9-80" href="#__codelineno-9-80"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x0e</span>
+</span><span id="__span-9-81"><a id="__codelineno-9-81" name="__codelineno-9-81" href="#__codelineno-9-81"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">BX</span><span class="p">,</span><span class="mi">15</span>
+</span><span id="__span-9-82"><a id="__codelineno-9-82" name="__codelineno-9-82" href="#__codelineno-9-82"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span>
+</span><span id="__span-9-83"><a id="__codelineno-9-83" name="__codelineno-9-83" href="#__codelineno-9-83"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">putloop</span>
+</span><span id="__span-9-84"><a id="__codelineno-9-84" name="__codelineno-9-84" href="#__codelineno-9-84"></a>
+</span><span id="__span-9-85"><a id="__codelineno-9-85" name="__codelineno-9-85" href="#__codelineno-9-85"></a><span class="nl">fin:</span>
+</span><span id="__span-9-86"><a id="__codelineno-9-86" name="__codelineno-9-86" href="#__codelineno-9-86"></a><span class="w">        </span><span class="nf">HLT</span>
+</span><span id="__span-9-87"><a id="__codelineno-9-87" name="__codelineno-9-87" href="#__codelineno-9-87"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span><span id="__span-9-88"><a id="__codelineno-9-88" name="__codelineno-9-88" href="#__codelineno-9-88"></a>
+</span><span id="__span-9-89"><a id="__codelineno-9-89" name="__codelineno-9-89" href="#__codelineno-9-89"></a><span class="nl">msg:</span>
+</span><span id="__span-9-90"><a id="__codelineno-9-90" name="__codelineno-9-90" href="#__codelineno-9-90"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0x0a</span>
+</span><span id="__span-9-91"><a id="__codelineno-9-91" name="__codelineno-9-91" href="#__codelineno-9-91"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="s">&quot;load error&quot;</span>
+</span><span id="__span-9-92"><a id="__codelineno-9-92" name="__codelineno-9-92" href="#__codelineno-9-92"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x0a</span>
+</span><span id="__span-9-93"><a id="__codelineno-9-93" name="__codelineno-9-93" href="#__codelineno-9-93"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mi">0</span>
+</span><span id="__span-9-94"><a id="__codelineno-9-94" name="__codelineno-9-94" href="#__codelineno-9-94"></a><span class="w">        </span><span class="kd">RESB</span><span class="w">   </span><span class="mh">0x7dfe</span><span class="o">-</span><span class="kc">$</span>
+</span><span id="__span-9-95"><a id="__codelineno-9-95" name="__codelineno-9-95" href="#__codelineno-9-95"></a><span class="w">        </span><span class="kd">DB</span><span class="w">     </span><span class="mh">0x55</span><span class="p">,</span><span class="mh">0xaa</span>
+</span></code></pre></div>
+<div class="language-nasm highlight"><span class="filename">haribote.nas</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0xc200</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nl">fin:</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nf">HLT</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span></code></pre></div>
+<h2 id="_7">确认操作系统的执行情况</h2>
+<p>考虑到将来我们肯定要做成Windows那样的画面，所以这次就来切换一下画面模式。</p>
+<div class="language-nasm highlight"><span class="filename">haribote.nas</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0xc200</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mh">0x13</span><span class="w">       </span><span class="c1">; VGA显卡，320x200x8位彩色</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nl">fin:</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="nf">HLT</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span></code></pre></div>
+<p>设定<code>AH=0x00</code>后，调用显卡BIOS的函数，都这样就可以切换显示模式了。</p>
+<p><img alt="image.png" src="https://vs-picbed-1320307070.cos.ap-nanjing.myqcloud.com/img/20240221211509.png" /></p>
+<p>另外，想要把磁盘装载内容的结束地址告诉给<code>haribote.sys</code>，所以在<code>JMP 0xc200</code>之前，我们将<code>CYLS</code>的值写到内存地址<code>0x0ff0</code>中。</p>
+<h2 id="32">32位模式前期准备</h2>
+<p>16位模式和32位模式中，机器语言的命令代码不一样。同样的机器语言，解释的方法不一样，所以16位模式的机器语言在32位模式下不能运行，反之亦然😭。</p>
+<p>由于BIOS是用16位机器语言写的。如果我们有什么事情想用BIOS做，那就全部放在开头，因为一旦进入32位模式就不能调用BIOS函数了。</p>
+<p>接下来还想从BIOS得到键盘状态。</p>
+<div class="language-nasm highlight"><span class="filename">haribote.nas</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">; 有关BOOT_INFO</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="no">CYLS</span><span class="w">    </span><span class="kd">EQU</span><span class="w">    </span><span class="mh">0x0ff0</span><span class="w">    </span><span class="c1">; 设定启动区</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="no">LEDS</span><span class="w">    </span><span class="kd">EQU</span><span class="w">    </span><span class="mh">0x0ff1</span><span class="w">    </span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="no">VMODE</span><span class="w">   </span><span class="kd">EQU</span><span class="w">    </span><span class="mh">0x0ff2</span><span class="w">    </span><span class="c1">; 颜色的位数</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="no">SCRNX</span><span class="w">   </span><span class="kd">EQU</span><span class="w">    </span><span class="mh">0x0ff4</span><span class="w">    </span><span class="c1">; 分辨率的X</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="no">SCRNX</span><span class="w">   </span><span class="kd">EQU</span><span class="w">    </span><span class="mh">0x0ff6</span><span class="w">    </span><span class="c1">; 分辨率的Y</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="no">VRAM</span><span class="w">    </span><span class="kd">EQU</span><span class="w">    </span><span class="mh">0x0ff8</span><span class="w">    </span><span class="c1">; 图像缓冲区的开始地址</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="k">ORG</span><span class="w">    </span><span class="mh">0xc200</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AL</span><span class="p">,</span><span class="mh">0x13</span><span class="w">   </span><span class="c1">; VGA显卡...</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x00</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x10</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="kt">BYTE</span><span class="w">  </span><span class="p">[</span><span class="nv">VMODE</span><span class="p">],</span><span class="mi">8</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="kt">WORD</span><span class="w">  </span><span class="p">[</span><span class="nv">SCRNX</span><span class="p">],</span><span class="mi">320</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="kt">WORD</span><span class="w">  </span><span class="p">[</span><span class="nv">SCRNY</span><span class="p">],</span><span class="mi">200</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="kt">DWORD</span><span class="w"> </span><span class="p">[</span><span class="nv">VRAM</span><span class="p">],</span><span class="w"> </span><span class="mh">0x000a0000</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="c1">; 用BIOS取得键盘上各种LED指示灯的状态。</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="nb">AH</span><span class="p">,</span><span class="mh">0x02</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">        </span><span class="nf">INT</span><span class="w">    </span><span class="mh">0x16</span><span class="w">      </span><span class="c1">; keyboard BIOS</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">        </span><span class="nf">MOV</span><span class="w">    </span><span class="p">[</span><span class="nv">LEDS</span><span class="p">],</span><span class="nb">AL</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="nl">fin:</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">        </span><span class="nf">HLT</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">        </span><span class="nf">JMP</span><span class="w">    </span><span class="nv">fin</span>
+</span></code></pre></div>
+<p>设置画面模式之后，还把画面模式的信息保存在了内存里。以后我们可能要支持各种不同的画面模式，这就需要把现在的设置信息保存起来以备后用。</p>
+<p>我们暂且将启动时的信息称为BOOT_INFO。</p>
+<h3 id="vram"><code>VRAM</code></h3>
+<p><code>VRAM</code>指的是显卡内存，也就是用来显示画面的内存。它的各个地址都对应着画面上的像素。</p>
+<p><code>VRAM</code>分布在内存分布图上好几个不同的地方。这是因为i，不同画面模式的像素数也不一样。</p>
+<p>在<code>INT 0x10</code>画面模式下，<code>VRAM</code>是<code>0xa0000~0xaffff</code>的64KB。</p>
+<h2 id="c">开始导入C语言</h2>
+<p>终于准备就绪，现在我们直接切换到C语言。</p>
+<p><code>haribote.sys</code>改名为<code>asmhead.nas</code>，并且，为了调用C语言写的程序，添加了汇编代码。</p>
+<div class="language-nasm highlight"><span class="filename">asmhead.nas</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>
+</span></code></pre></div>
+<div class="language-c highlight"><span class="filename">bootpack.c</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HariMain</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">{</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nl">fin</span><span class="p">:</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="k">goto</span><span class="w"> </span><span class="n">fin</span><span class="p">;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="c1">//这里想写上HLT，但C语言不能用HLT</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>goto</code>相当于汇编语言中的<code>JMP</code>，实际上也是被翻译成<code>JMP</code>指令。</p>
+<h3 id="c_1">C语言怎样变成机器语言</h3>
+<p>那么这个<code>bootpack.c</code>是怎样变成机器语言的呢🤔？</p>
+<ol>
+<li>使用<code>cc1.exe</code>从<code>bootpack.c</code>生成<code>bootpack.gas</code></li>
+<li>使用<code>gas2nask.exe</code>从<code>bootpack.exe</code>生成<code>bootpack.nas</code></li>
+<li>使用<code>nask.exe</code>从<code>bootpack.exe</code>生成<code>bootpack.obj</code></li>
+<li>使用<code>obi2bim.exe</code>从<code>bootpack.exe</code>生成<code>bootpack.bim</code></li>
+<li>使用<code>bim2hrb.exe</code>从<code>bootpack.bin</code>生成<code>bootpack.hrb</code></li>
+</ol>
+<p><code>cc1</code>由<code>gcc</code>改造而来，<code>gcc</code>以<code>gas</code>汇编语言为基础，不能翻译成<code>nask</code>。所以我们需要把<code>gas</code>变换成<code>nask</code>能翻译的语法，这就是<code>gas2nask.exe</code>。</p>
+<p>一旦转换成<code>nas</code>文件，只要用<code>nask</code>翻译一下，就能变成机器语言了。</p>
+<h3 id="_8">目标文件</h3>
+<p>首先用<code>nask</code>制作<code>obj</code>文件，又称为目标文件。因为我们的程序是C语言写的，目标是机器语言。</p>
+<p>目标文件是一种特殊的机器语言文件，必须与其他文件链接后才能变成真正可以执行的机器语言。</p>
+<p>C语言有它的局限性，不可能只用C语言来编写所有的程序，其中有一部分必须用汇编语言来写，然后<strong>链接</strong>到C语言写的程序上。这也是C语言的不便之处——不能直接把它写进映像文件。</p>
+<p>单个的目标文件还不是独立的机器语言，其中还有一部分是没完成的。<mark>为了能做成完整的机器语言，必须将必要的目标文件全部链接上</mark>。完成这项工作的是<code>obj2bim</code>。</p>
+<p><code>bim</code>是作者自创的一种文件格式，意思为<code>binary image</code>，它是一种二进制映像文件。</p>
+<h4 id="_9">映像文件</h4>
+<p>磁盘映像也是一种映像文件。所谓映像文即不是文件本来的状态，而是一种替代形式。</p>
+<p>所以，实际上<code>bim</code>文件也不是完成品，它只是将各个部分全部都链接在仪器，做成了一个完整的机器语言文件。</p>
+<p>而为了能实际使用，我们还需要针对每一个不同操作系统的要求<strong>进行必要的加工</strong>。必须加上识别用的文件头，或者压缩等。</p>
+<p>这样做的好处就是仅靠这个编译器，就可以制作Windows、Linux、OSASK、haribote用的可执行文件。</p>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">TOOLPATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>../z_tools/
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nv">INCPATH</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>../z_tools/haribote/
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nv">MAKE</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>make.exe<span class="w"> </span>-r
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nv">NASK</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>nask.exe
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="nv">CC1</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>cc1.exe<span class="w"> </span>-I<span class="w"> </span><span class="k">$(</span>INCPATH<span class="k">)</span><span class="w"> </span>-Os<span class="w"> </span>-Wall<span class="w"> </span>-quiet
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="nv">GAS2NASK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>gas2nask.exe<span class="w"> </span>-a
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nv">OBJ2BIM</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>obj2bim.exe
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="nv">BIM2HRB</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>bim2hrb.exe
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="nv">RULEFILE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>haribote/haribote.rul
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nv">EDIMG</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>edimg.exe
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="nv">IMGTOL</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TOOLPATH<span class="k">)</span>imgtol.com
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="nv">COPY</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>copy
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="nv">DEL</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>del
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="nf">default </span><span class="o">:</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="nf">ipl10.bin </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>10.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">    </span><span class="k">$(</span>NASK<span class="k">)</span><span class="w"> </span>ipl10.nas<span class="w"> </span>ipl10.bin<span class="w"> </span>ipl10.lst
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="nf">asmhead.bin </span><span class="o">:</span><span class="w"> </span><span class="n">asmhead</span>.<span class="n">nas</span> <span class="n">Makefifle</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="w">    </span><span class="k">$(</span>NASK<span class="k">)</span><span class="w"> </span>asmhead.nas<span class="w"> </span>asmhead.bin<span class="w"> </span>asmhead.lst
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="nf">bootpack.gas </span><span class="o">:</span><span class="w"> </span><span class="n">bootpack</span>.<span class="n">c</span> <span class="n">Makefile</span>
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="w">    </span><span class="k">$(</span>CC1<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span>bootpack.gas<span class="w"> </span>bootpack.c
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="nf">bootpack.nas </span><span class="o">:</span><span class="w"> </span><span class="n">bootpack</span>.<span class="n">gas</span> <span class="n">Makefile</span>
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a><span class="w">    </span><span class="k">$(</span>GAS2NASK<span class="k">)</span><span class="w"> </span>bootpack.gas<span class="w"> </span>bootpack.nas
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>
+</span><span id="__span-15-31"><a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="nf">bootpack.obj </span><span class="o">:</span><span class="w"> </span><span class="n">bootpack</span>.<span class="n">nas</span> <span class="n">Makefile</span>
+</span><span id="__span-15-32"><a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a><span class="w">    </span><span class="k">$(</span>NASK<span class="k">)</span><span class="w"> </span>bootpack.nas<span class="w"> </span>bootpack.obj<span class="w"> </span>bootpack.lst
+</span><span id="__span-15-33"><a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>
+</span><span id="__span-15-34"><a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a><span class="nf">bootpack.bim </span><span class="o">:</span><span class="w"> </span><span class="n">bootpack</span>.<span class="n">obj</span> <span class="n">Makefile</span>
+</span><span id="__span-15-35"><a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a><span class="w">    </span><span class="k">$(</span>OBJ2BIM<span class="k">)</span><span class="w"> </span>@<span class="k">$(</span>RULEFILE<span class="k">)</span><span class="w"> </span>out:bootpack.bim<span class="w"> </span>stack:3136k<span class="w"> </span>map:bootpack.map<span class="w"> </span>bootpack.obj
+</span><span id="__span-15-36"><a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a><span class="c"># 3MB+64KB=3136KB</span>
+</span><span id="__span-15-37"><a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>
+</span><span id="__span-15-38"><a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a><span class="nf">bootpack.hrb </span><span class="o">:</span><span class="w"> </span><span class="n">bootpack</span>.<span class="n">bim</span> <span class="n">Makefile</span>
+</span><span id="__span-15-39"><a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a><span class="w">    </span><span class="k">$(</span>BIM2HRB<span class="k">)</span><span class="w"> </span>bootpack.bim<span class="w"> </span>bootpack.hrb<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-15-40"><a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>
+</span><span id="__span-15-41"><a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a><span class="nf">haribote.sys </span><span class="o">:</span><span class="w"> </span><span class="n">asmhead</span>.<span class="n">bin</span> <span class="n">bootpack</span>.<span class="n">hrb</span> <span class="n">Makefile</span>
+</span><span id="__span-15-42"><a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a><span class="w">    </span>copy<span class="w"> </span>/B<span class="w"> </span>asmhead.bin+bootpack.hrb<span class="w"> </span>haribote.sys
+</span><span id="__span-15-43"><a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>
+</span><span id="__span-15-44"><a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a><span class="nf">haribote.img </span><span class="o">:</span><span class="w"> </span><span class="n">ipl</span>10.<span class="n">bin</span> <span class="n">haribote</span>.<span class="n">sys</span> <span class="n">Makefile</span>
+</span><span id="__span-15-45"><a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a><span class="w">    </span><span class="k">$(</span>EDIMG<span class="k">)</span><span class="w"> </span>imgin:../z_tools/fdimg0at.tek<span class="w"> </span>wbinimg<span class="w"> </span>src:ipl10.bin<span class="w"> </span>len512<span class="w"> </span>from:0<span class="w"> </span>to:0<span class="w"> </span>copy<span class="w"> </span>from:haribote.sys<span class="w"> </span>to:@:<span class="w"> </span>imgout:haribote.img
+</span><span id="__span-15-46"><a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>
+</span><span id="__span-15-47"><a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a><span class="nf">img </span><span class="o">:</span>
+</span><span id="__span-15-48"><a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>haribote.img
+</span><span id="__span-15-49"><a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>
+</span><span id="__span-15-50"><a id="__codelineno-15-50" name="__codelineno-15-50" href="#__codelineno-15-50"></a><span class="nf">run </span><span class="o">:</span>
+</span><span id="__span-15-51"><a id="__codelineno-15-51" name="__codelineno-15-51" href="#__codelineno-15-51"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-15-52"><a id="__codelineno-15-52" name="__codelineno-15-52" href="#__codelineno-15-52"></a><span class="w">    </span><span class="k">$(</span>COPY<span class="k">)</span><span class="w"> </span>haribote.img<span class="w"> </span>..<span class="se">\z</span>_tools<span class="se">\q</span>emu<span class="se">\f</span>dimage0.bin
+</span><span id="__span-15-53"><a id="__codelineno-15-53" name="__codelineno-15-53" href="#__codelineno-15-53"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>-C<span class="w"> </span>../z_tools/qemu
+</span><span id="__span-15-54"><a id="__codelineno-15-54" name="__codelineno-15-54" href="#__codelineno-15-54"></a>
+</span><span id="__span-15-55"><a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a><span class="nf">install </span><span class="o">:</span>
+</span><span id="__span-15-56"><a id="__codelineno-15-56" name="__codelineno-15-56" href="#__codelineno-15-56"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>img
+</span><span id="__span-15-57"><a id="__codelineno-15-57" name="__codelineno-15-57" href="#__codelineno-15-57"></a><span class="w">    </span><span class="k">$(</span>IMGTOL<span class="k">)</span><span class="w"> </span>w<span class="w"> </span>a:<span class="w"> </span>haribote.img
+</span><span id="__span-15-58"><a id="__codelineno-15-58" name="__codelineno-15-58" href="#__codelineno-15-58"></a>
+</span><span id="__span-15-59"><a id="__codelineno-15-59" name="__codelineno-15-59" href="#__codelineno-15-59"></a><span class="nf">clean </span><span class="o">:</span>
+</span><span id="__span-15-60"><a id="__codelineno-15-60" name="__codelineno-15-60" href="#__codelineno-15-60"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>*.bin
+</span><span id="__span-15-61"><a id="__codelineno-15-61" name="__codelineno-15-61" href="#__codelineno-15-61"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>*.lst
+</span><span id="__span-15-62"><a id="__codelineno-15-62" name="__codelineno-15-62" href="#__codelineno-15-62"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>*.gas
+</span><span id="__span-15-63"><a id="__codelineno-15-63" name="__codelineno-15-63" href="#__codelineno-15-63"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>*.obj
+</span><span id="__span-15-64"><a id="__codelineno-15-64" name="__codelineno-15-64" href="#__codelineno-15-64"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>bootpack.nas
+</span><span id="__span-15-65"><a id="__codelineno-15-65" name="__codelineno-15-65" href="#__codelineno-15-65"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>bootpack.map
+</span><span id="__span-15-66"><a id="__codelineno-15-66" name="__codelineno-15-66" href="#__codelineno-15-66"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>bootpack.bim
+</span><span id="__span-15-67"><a id="__codelineno-15-67" name="__codelineno-15-67" href="#__codelineno-15-67"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>bootpack.harb
+</span><span id="__span-15-68"><a id="__codelineno-15-68" name="__codelineno-15-68" href="#__codelineno-15-68"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>haribote.sys
+</span><span id="__span-15-69"><a id="__codelineno-15-69" name="__codelineno-15-69" href="#__codelineno-15-69"></a>
+</span><span id="__span-15-70"><a id="__codelineno-15-70" name="__codelineno-15-70" href="#__codelineno-15-70"></a><span class="nf">src_only </span><span class="o">:</span>
+</span><span id="__span-15-71"><a id="__codelineno-15-71" name="__codelineno-15-71" href="#__codelineno-15-71"></a><span class="w">    </span><span class="k">$(</span>MAKE<span class="k">)</span><span class="w"> </span>clean
+</span><span id="__span-15-72"><a id="__codelineno-15-72" name="__codelineno-15-72" href="#__codelineno-15-72"></a><span class="w">    </span>-<span class="k">$(</span>DEL<span class="k">)</span><span class="w"> </span>haribote.img
+</span></code></pre></div>
+<h2 id="hlt">实现<code>HLT</code></h2>
+<div class="language-nasm highlight"><span class="filename">naskfunc.nas</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="err">[</span><span class="nf">FORMAT</span><span class="w"> </span><span class="s">&quot;WCOFF&quot;</span><span class="p">]</span><span class="w">       </span><span class="c1">; 制作目标文件的模式</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="err">[</span><span class="k">BITS</span><span class="w"> </span><span class="mi">32</span><span class="p">]</span><span class="w">              </span><span class="c1">; 制作32位模式用的机械语言</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1">; 制作目标文件的信息</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="err">[</span><span class="nf">FILE</span><span class="w"> </span><span class="s">&quot;naskfunc.nas&quot;</span><span class="p">]</span><span class="w">  </span><span class="c1">; 源文件名信息</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="k">GLOBAL</span><span class="w"> </span><span class="nv">_io_HLY</span><span class="w">     </span><span class="c1">; 程序中包含的函数名</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1">; 以下是实际的函数</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="err">[</span><span class="k">SECTION</span><span class="w"> </span><span class="nv">.text</span><span class="p">]</span><span class="w">        </span><span class="c1">; 目标文件中写了这些之后再写程序</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="nl">_io_hlt:</span><span class="w">               </span><span class="c1">; void io_hlt(void)</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="nf">HLT</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="nf">RET</span>
+</span></code></pre></div>
+<p>用汇编写的函数，之后还要与<code>bootpack.obj</code>链接，所以也需要编译成目标文件，因此将输出格式设定为<code>WCOFF</code>模式。</p>
+<p><code>RET</code>指令相当于C语言的<code>return</code>。</p>
+<div class="language-c highlight"><span class="filename">bootpack.c</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">io_hlt</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HariMain</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">{</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="nl">fin</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="n">io_hlt</span><span class="p">();</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="k">goto</span><span class="w"> </span><span class="n">fin</span><span class="p">;</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - present Rainstorm
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
